@@ -40,7 +40,7 @@ const Hero = () => {
 
   useEffect;
 
-  //   Animation - GSAP
+  // GSAP Animation
   useGSAP(
     () => {
       if (hasClicked) {
@@ -86,7 +86,6 @@ const Hero = () => {
 
   const getVideoSrc = (index) => heroVideoLinks[index];
 
-
   return (
     <div className="relative h-dvh w-screen overflow-x-hidden">
       {isLoading && (
@@ -100,18 +99,18 @@ const Hero = () => {
         className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75">
         <div>
           <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
-            {/* Head Hero center hover video */}
+            {/* Head Hero */}
 
             <div
               onClick={handleMiniVideoClick}
-              className="origin-center scale-50 opacity-0 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100"> 
+              className="origin-center scale-50 opacity-0 hidden sm:block md:block transition-all duration-500 ease-in hover:scale-100 hover:opacity-100">
               {/* // Enable hover- hover:scale-100 hover:opacity-100 */}
               <video
                 ref={nextVideoRef}
                 src={getVideoSrc(
                   (currentIndex % totalVideos) + 1
                 )}
-                loops
+                loop
                 muted
                 id="current-video"
                 className="size-64 origin-center scale-150 object-cover object-center"
@@ -146,7 +145,7 @@ const Hero = () => {
             onLoadedData={handleVideoLoad}
           />
 
-          {/* Head Hero Text */}
+          {/* Head Hero Bottom Travel Text */}
           <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75">
             T<b>R</b>AVEL
           </h1>
@@ -169,13 +168,17 @@ const Hero = () => {
                 title="Chat Now"
                 leftIcon={<BiSolidPlaneAlt />}
                 containerClass="!bg-yellow-300 flex-center gap-1"
-                onClick={() => window.open("https://purple-flaky-antlion.app.genez.io/login")}
+                onClick={() =>
+                  window.open(
+                    "https://purple-flaky-antlion.app.genez.io/login"
+                  )
+                }
               />
             </div>
           </div>
         </div>
 
-        {/* Hero Dowwn Text- Gamming moveover black text */}
+        {/* Hero Dowwn black text */}
         <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black">
           TRA<b>V</b>EL
         </h1>

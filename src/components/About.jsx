@@ -39,9 +39,15 @@ const About = () => {
         />
 
         <div className="about-subtext">
-          <p className="block md:hidden">Every adventure, one platform, from dream to destination.</p>
+          <p className="block md:hidden">
+            Every adventure, one platform, from dream to
+            destination.
+          </p>
           <p className="text-gray-500 hidden md:block">
-              Plan smarter, travel better. Organize every journey—flights, stays, experiences—into one seamless itinerary, accessible anytime, anywhere you go.
+            Plan smarter, travel better. Organize every
+            journey—flights, stays, experiences—into one
+            seamless itinerary, accessible anytime, anywhere
+            you go.
           </p>
         </div>
       </div>
